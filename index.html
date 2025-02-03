@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ICTSeatwork#2</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body{
+			background-image:url(https://static-cdn.toi-media.com/www/uploads/2021/02/iStock-966248982-640x400.jpg);
+			background-repeat: no-repeat;
+    		background-size: cover;
+    		background-attachment: fixed;
+    		text-align: center;
+    		padding: 90px;
+    		color: white;
+    	}
+
+    	.container{
+    		background-color: grey;
+		    padding-top: 40px;
+		    opacity: 0.85;
+		    width: 950px;
+		    padding: 20px;
+		    margin: auto;
+		    box-shadow:2px 2px 15px black;
+    	}
+
+	</style>
+
+</head>
+<body>
+
+<form>
+	<div class="container">
+		<label>MATHLORDZ</label>
+        <details ontoggle="message()">
+            <summary>Instructions</summary>
+                <i id="show"></i>
+        </details>
+        <label>How about a value for A:</label>
+            <input type="text" id="num1" class="form-control">
+       	<label>Gimme a value for the B:</label>
+            <input type="text" id="num2" class="form-control">
+        <button type="Submit" class="btn btn-success" onclick="plus()">Heres if you add A & B</button>
+        <div>
+        <br><br>
+        <button type="Submit" class="btn btn-success" onclick="subtract()">Heres if you subtract both A & B</button>
+        <div>
+       	<br><br>
+        <button type="Submit" class="btn btn-success" onclick="divide()">How abt you divide them?</button>
+        <div>
+       	<br><br>
+        <button type="Submit" class="btn btn-success" onclick="multiply()">Multiply them maybe?</button>
+    </div>
+    </form>
+
+    <script>
+        function plus(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var sum = Number(num1) + Number(num2);
+                document.write("The sum is:" + sum);
+        }
+       	
+        function subtract(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var dif = Number(num1) - Number(num2);
+                document.write("The difference is:" + dif);
+        }
+
+        function divide(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var div = Number(num1) / Number(num2);
+                document.write("The quotient is:" + div);
+        }
+
+        function multiply(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var pro = Number(num1) * Number(num2);
+                document.write("The product is:" + pro);
+        }
+
+        
+        function message(){
+            //alert("Try it");
+            document.getElementById("show").innerHTML = "Enter two numbers then find its answer.";
+        }
+        
+    </script>
+
+</body>
+</html>
